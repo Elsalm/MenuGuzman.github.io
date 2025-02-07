@@ -1,6 +1,6 @@
 async function cargarDatos() {
   try {
-    const datos = await fetch("/js/datos.json").then((response) =>
+    const datos = await fetch("js/datos.json").then((response) =>
       response.json(),
     );
     return datos;

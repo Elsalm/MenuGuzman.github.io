@@ -1,0 +1,114 @@
+{
+  "Bocadillos": [
+    {
+      "nombre": "Bocadillo de Jamon Jork",
+      "ingredientes": "Jamon York y Mantequilla",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo Mixto",
+      "ingredientes": "Jamon York y Queso",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo de Queso Machego",
+      "ingredientes": "Queso Machego y Aceite de oliva",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo de Jamon Serrano",
+      "ingredientes": "Jamon Serrano y Aceite de oliva",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo Catalana",
+      "ingredientes": "Jamon Serrano, Tomate y Aceite de oliva",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo Catalana de Machego",
+      "ingredientes": "Queso Machego, Tomate y Aceite de oliva",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo Carne Mechada",
+      "ingredientes": "Carne Mechada y Aceite de oliva",
+      "precio": [1.6, 2.5, 2.8]
+    },
+    {
+      "nombre": "Bocadillo de pavo",
+      "ingredientes": "Pavo y Aceite de oliva",
+      "precio": [1.8, 2.6, 2.8]
+    },
+    {
+      "nombre": "Bocadillo Catalana de pavo",
+      "ingredientes": "Pavo ,Tomate y Aceite de oliva",
+      "precio": [1.8, 2.6, 2.8]
+    },
+    {
+      "nombre": "Bocadillo de Lomo en Manteca",
+      "precio": [2.0, 2.8, 3.0]
+    },
+    {
+      "nombre": "Bocadillo de Atun con Tomate",
+      "ingredientes": "Atun y Tomate",
+      "precio": [2.0, 2.8, 3.0]
+    },
+    {
+      "nombre": "Bocadillo de Tortilla a la Francesa",
+      "ingredientes": "Tortilla a la Francesa y Tomate",
+      "precio": [2.0, 2.8, 3.0]
+    },
+    {
+      "nombre": "Bocadillo de Bacon",
+      "ingredientes": "Bacon y Tomate",
+      "precio": [2.0, 2.8, 3.0]
+    }
+  ],
+  "Bebidas": {
+    "Frias": [
+      {
+        "nombre": "Agua",
+        "precio": [1.0, 2.5]
+      },
+      {
+        "nombre": "Coca Cola",
+        "precio": 2.0
+      },
+      {
+        "nombre": "Fanta",
+        "precio": 2.0
+      },
+      {
+        "nombre": "Nestea",
+        "precio": 2.0
+      },
+      {
+        "nombre": "Aquarius",
+        "precio": 2.0
+      },
+      {
+        "nombre": "Cerveza",
+        "precio": 2.0
+      }
+    ],
+    "Calientes": [
+      {
+        "nombre": "Cafe Chico",
+        "precio": 1.3
+      },
+      {
+        "nombre": "Cafe Grande",
+        "precio": 1.5
+      },
+      {
+        "nombre": "Colacao",
+        "precio": 1.5
+      },
+      {
+        "nombre": "Te",
+        "precio": 1.5
+      }
+    ]
+  }
+}

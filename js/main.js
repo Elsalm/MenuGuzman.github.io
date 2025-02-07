@@ -8,5 +8,88 @@ async function cargarDatos() {
     console.error("Error al cargar los datos:", error);
   }
 }
-console.log(cargarDatos());
-const contenedor = document.querySelector(".container");
+
+const contenedorBocadillos = document.querySelector(".bocadilloDown");
+const contenedorBebidas = document.querySelector(".bebidasDown");
+const dropdown = document.querySelectorAll(".btnDrop");
+const lista = document.querySelectorAll(".lista");
+
+async function mostrarBocadillos() {
+  const datos = await cargarDatos();
+  datos.Bocadillos.forEach((b) => {
+    const bocadillo = document.createElement("div");
+    const nombre = document.createElement("h4");
+    const precio = document.createElement("div");
+    const pequeño = document.createElement("p");
+    const mediano = document.createElement("p");
+    const grande = document.createElement("p");
+
+    nombre.innerText = b.nombre;
+    pequeño.innerText = `Pitufo: ${b.precio[0]}`;
+    mediano.innerText = `3/4: ${b.precio[1]}`;
+    grande.innerText = `Barrita: ${b.precio[2]}`;
+
+    precio.appendChild(pequeño);
+    precio.appendChild(mediano);
+    precio.appendChild(grande);
+    bocadillo.appendChild(nombre);
+
+    if (b.ingredientes) {
+      const ingredientes = document.createElement("p");
+      bocadillo.appendChild(ingredientes);
+      ingredientes.innerText = `Ingredientes: ${b.ingredientes}`;
+    }
+
+    bocadillo.appendChild(precio);
+    contenedorBocadillos.appendChild(bocadillo);
+  });
+}
+
+async function mostrarBebidas() {
+  const datos = await cargarDatos();
+
+  for (let a in datos.Bebidas) {
+    const tipo = document.createElement("h2");
+    contenedorBebidas.appendChild(tipo);
+    tipo.innerText = a;
+    datos.Bebidas[a].forEach((b) => {
+      const bebida = document.createElement("div");
+      const nombre = document.createElement("h4");
+      const precio = document.createElement("p");
+
+      nombre.innerText = b.nombre;
+      if (Array.isArray(b.precio)) {
+        precio.innerText = b.precio.join(", ");
+      } else {
+        precio.innerText = b.precio;
+      }
+      bebida.appendChild(nombre);
+      bebida.appendChild(precio);
+      contenedorBebidas.appendChild(bebida);
+    });
+  }
+}
+
+mostrarBebidas();
+mostrarBocadillos();
+let last = undefined;
+dropdown.forEach((button) => {
+  button.addEventListener(`click`, (e) => {
+    let current = e.target.nextElementSibling;
+    current.classList.toggle("show");
+    if (last !== current) {
+      if (typeof last == "undefined") {
+        last = current;
+      } else {
+        last.classList.remove("show");
+        last = current;
+      }
+    }
+  });
+});
+
+window.onclick = function (event) {
+  if (!event.target.matches(".btnDrop")) {
+    lista.forEach((close) => close.classList.remove("show"));
+  }
+};

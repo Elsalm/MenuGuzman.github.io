@@ -1,6 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mulish&display=swap");
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Libre Baskerville", serif;
+}
+
+p,
+a {
+    font-family: "Mulish", sans-serif;
+}
+main {
+    flex: 1;
+    margin-bottom: 2rem;
+}
+.title {
+    color: #ce2523;
+    text-align: center;
+}
 .lista {
     display: none;
 }
+.lista {
+    font-family: "Mulish", sans-serif;
+    padding: 0 0.1rem;
+}
+.lista p {
+    font-weight: bold;
+    margin: 0;
+}
+.lista span {
+    color: #ce2523;
+}
 .show {
     display: block;
+}
+
+.img-container {
+    text-align: center;
+}
+.img-container img {
+    width: 60%;
+}
+
+.btnDrop {
+    width: 100%;
+    padding: 1rem;
+    font-family: "Mulish", sans-serif;
+    font-weight: 600;
+    background-color: #fff;
+    background-image: url("/assets/img/bread-svgrepo-com.svg");
+    background-repeat: repeat;
+    margin: 0.5rem 0;
+    color: #ce2523;
+    border: solid 3px #182aa7;
+    box-shadow: 0px 0px 4px 2px #848fd6;
+    font-size: 1.5rem;
+}
+
+.bocadillo,
+.bebida {
+    border-bottom: solid 1px #ad091e;
+    margin: 1rem 0;
+    padding: 0 0.2rem;
+}
+
+footer,
+header {
+    background-color: #e3e3e3;
+}
+
+footer {
+}
+footer div {
+    text-align: center;
+}
+footer div img {
+    width: 30%;
+}
+
+.contacto ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contacto a {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.contacto a:hover {
+    opacity: 1;
+}
+.contacto a:focus {
+    opacity: 1;
+}
+
+.autor {
+    margin: 1rem 2rem;
+    text-align: center;
+    border-top: solid #000002 1px;
+    padding: 0 1rem;
+}
+.autor p {
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    footer div img {
+        width: 13%;
+    }
+    .img-container img {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    footer div img {
+        width: 13%;
+    }
+    .img-container img {
+        width: 30%;
+    }
 }

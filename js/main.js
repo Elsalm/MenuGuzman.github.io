@@ -25,22 +25,24 @@ async function mostrarBocadillos() {
     const grande = document.createElement("p");
 
     nombre.innerText = b.nombre;
-    pequeño.innerText = `Pitufo: ${b.precio[0]}`;
-    mediano.innerText = `3/4: ${b.precio[1]}`;
-    grande.innerText = `Barrita: ${b.precio[2]}`;
+    pequeño.innerHTML = `Pitufo: <span>${b.precio[0]}€</span>`;
+    mediano.innerHTML = `3/4: <span>${b.precio[1]}€</span>`;
+    grande.innerHTML = `Barrita: <span>${b.precio[2]}€</span>`;
 
     precio.appendChild(pequeño);
     precio.appendChild(mediano);
     precio.appendChild(grande);
+    nombre.classList = "title";
     bocadillo.appendChild(nombre);
 
     if (b.ingredientes) {
       const ingredientes = document.createElement("p");
       bocadillo.appendChild(ingredientes);
-      ingredientes.innerText = `Ingredientes: ${b.ingredientes}`;
+      ingredientes.innerHTML = `Ingredientes: <span>${b.ingredientes}</span>`;
     }
 
     bocadillo.appendChild(precio);
+    bocadillo.classList = "bocadillo";
     contenedorBocadillos.appendChild(bocadillo);
   });
 }
@@ -50,8 +52,9 @@ async function mostrarBebidas() {
 
   for (let a in datos.Bebidas) {
     const tipo = document.createElement("h2");
-    contenedorBebidas.appendChild(tipo);
     tipo.innerText = a;
+    tipo.classList = "title";
+    contenedorBebidas.appendChild(tipo);
     datos.Bebidas[a].forEach((b) => {
       const bebida = document.createElement("div");
       const nombre = document.createElement("h4");
@@ -59,12 +62,14 @@ async function mostrarBebidas() {
 
       nombre.innerText = b.nombre;
       if (Array.isArray(b.precio)) {
-        precio.innerText = b.precio.join(", ");
+        precio.innerHTML = `Precio: <span>${b.precio.join("€, ")}€</span>`;
       } else {
-        precio.innerText = b.precio;
+        precio.innerHTML = `Precio: <span>${b.precio}€</span>`;
       }
+      nombre.classList = "title";
       bebida.appendChild(nombre);
       bebida.appendChild(precio);
+      bebida.classList = "bebida";
       contenedorBebidas.appendChild(bebida);
     });
   }
@@ -72,6 +77,7 @@ async function mostrarBebidas() {
 
 mostrarBebidas();
 mostrarBocadillos();
+
 let last = undefined;
 dropdown.forEach((button) => {
   button.addEventListener(`click`, (e) => {

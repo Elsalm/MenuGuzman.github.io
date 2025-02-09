@@ -69,7 +69,7 @@
     "Frias": [
       {
         "nombre": "Agua",
-        "precio": [1.0, 2.5]
+        "precio": [1.0, 1.5]
       },
       {
         "nombre": "Coca Cola",
@@ -90,6 +90,10 @@
       {
         "nombre": "Cerveza",
         "precio": 2.0
+      },
+      {
+        "nombre": "Puleva",
+        "precio": 2.0
       }
     ],
     "Calientes": [
@@ -106,7 +110,7 @@
         "precio": 1.5
       },
       {
-        "nombre": "Te",
+        "nombre": "Té",
         "precio": 1.5
       }
     ]

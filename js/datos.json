@@ -63,6 +63,11 @@
       "nombre": "Bocadillo de Bacon",
       "ingredientes": "Bacon y Tomate",
       "precio": [2.0, 2.8, 3.0]
+    },
+    {
+      "nombre": "Bocadillo de Bacon Completo",
+      "ingredientes": "Bacon y Tomate",
+      "precio": [2.5, 3.3, 3.5]
     }
   ],
   "Bebidas": {
@@ -110,7 +115,24 @@
         "precio": 1.5
       },
       {
-        "nombre": "Té",
+
+        "nombre": "Té Verde",
+        "precio": 1.5
+      },
+      {
+        "nombre": "Té Rojo",
+        "precio": 1.5
+      },
+      {
+        "nombre": "Té Negro",
+        "precio": 1.5
+      },
+      {
+        "nombre": "Manzanilla",
+        "precio": 1.5
+      },
+      {
+        "nombre": "Tila",
         "precio": 1.5
       }
     ]

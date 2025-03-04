@@ -13,6 +13,7 @@ const contenedorBocadillos = document.querySelector(".bocadilloDown");
 const contenedorBebidas = document.querySelector(".bebidasDown");
 const dropdown = document.querySelectorAll(".btnDrop");
 const lista = document.querySelectorAll(".lista");
+const main = document.querySelector("main");
 
 async function mostrarBocadillos() {
   const datos = await cargarDatos();
@@ -83,6 +84,7 @@ dropdown.forEach((button) => {
   button.addEventListener(`click`, (e) => {
     let current = e.target.nextElementSibling;
     current.classList.toggle("show");
+    main.classList.toggle("active");
     if (last !== current) {
       if (typeof last == "undefined") {
         last = current;

@@ -84,7 +84,12 @@ dropdown.forEach((button) => {
   button.addEventListener(`click`, (e) => {
     let current = e.target.nextElementSibling;
     current.classList.toggle("show");
-    main.classList.toggle("active");
+    
+    if (current.classList.contains("show")) {
+      main.classList.add("active");
+    } else {
+      main.classList.remove("active");
+
     if (last !== current) {
       if (typeof last == "undefined") {
         last = current;
@@ -98,6 +103,9 @@ dropdown.forEach((button) => {
 
 window.onclick = function (event) {
   if (!event.target.matches(".btnDrop")) {
-    lista.forEach((close) => close.classList.remove("show"));
+    lista.forEach((close) => {
+      close.classList.remove("show");
+      main.classList.remove("active");
+    });
   }
 };

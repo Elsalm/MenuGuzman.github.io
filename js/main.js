@@ -84,12 +84,12 @@ dropdown.forEach((button) => {
   button.addEventListener(`click`, (e) => {
     let current = e.target.nextElementSibling;
     current.classList.toggle("show");
-    
+
     if (current.classList.contains("show")) {
       main.classList.add("active");
     } else {
       main.classList.remove("active");
-
+    }
     if (last !== current) {
       if (typeof last == "undefined") {
         last = current;

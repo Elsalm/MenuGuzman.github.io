@@ -105,7 +105,7 @@ window.onclick = function (event) {
   if (!event.target.matches(".btnDrop")) {
     lista.forEach((close) => {
       close.classList.remove("show");
-      main.classList.toggle("active");
+      main.classList.remove("active");
     });
   }
 };
